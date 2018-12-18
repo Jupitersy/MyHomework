@@ -1,0 +1,180 @@
+/* This applies to every element in the html */
+html * {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0; /* REMOVE MARGIN or MARGIN: NO!❗🛑❌ */
+}
+
+/* TYPOGRAPHY */
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+h1{
+    font-size: 60px;
+    font-weight: 300;
+}
+p {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+a {
+    color: #000;
+    text-decoration: none; /* UNDERLINE: NO!❌🛑❗ */
+}
+a.button {
+    padding: 20px 40px;
+    display: inline-block;
+    background-color: #DBA380;
+    height: 60px;
+    font-size: 16px;
+    color: #ffffff;
+    position: relative;
+}
+a.button::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 80px;
+    background: #000;
+    position: absolute;
+    top: 50%;
+    right: -60px;
+}
+
+/* HEADER */
+
+header {
+    /* posa */
+    position: absolute;
+    display: flex;
+    /* jcsb */
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    padding: 40px 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+header nav {
+    width: 70%;
+}
+
+header nav ul {
+    display: flex; /* make it inline */
+    list-style: none; /* remove the dots */
+    margin: 0; /* remove margin */
+}
+
+header nav ul li {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0 20px; /* no padding top and bottom. padding on the right and left */
+    position: relative;
+}
+
+header nav ul li.active::after{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -10%;
+    left: calc(50% -10px);
+    height: 1px;
+    width: 30px;
+    background: #000;
+
+}
+
+/* CONTENT */
+
+section.hero {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(50deg,#dd8888 30%, transparent),
+    url('brooke-lark-158017-unsplash.jpg');
+    background-size: contain;
+    background-position: 100% -50%;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    /*padding: 100px 100px;  DONT NEED THIS ANYMORE !!*/ 
+}
+
+section.hero div.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+section.hero div.content {
+
+    width: 50%;
+}
+
+section.hero button {
+    background: #DBA380;
+    color: white;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: none; /* BORDER: NO!❌🛑❗*/
+    /* box-shadow: x y blur color; */
+    box-shadow: 15px 15px 50px rgba(0,0,0,0.2);
+    margin-top: 50px;
+    position: relative;
+}
+section.hero button::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 80px;
+    background: #000;
+    position: absolute;
+    top: 50%;
+    right: -100px;
+}
+section.intro {
+    /*padding: 0 100px; DONT NEED THIS ANYMORE !!!*/
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section.intro nav ul {
+    display: flex;
+    justify-content: space-between; /* space the elements evenly */
+    list-style: none; /* remove the dots from the list */
+    padding: 0; /* remove the padding from the list */
+    margin-top: -75px; /* PULL IT UP 🔥🐸 */
+}
+
+section.intro nav ul li {
+    background: white;
+    padding: 7%;
+    /* box-shadow: x y blur color */
+    box-shadow: 0px 10px 50px rgba(0,0,0,0.2);
+}
+section.intro nav ul li img{
+    height: 64px;
+    margin-bottom: 16px;
+}
+
+section.intro nav ul li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+section.intro div {
+    max-width: 580px;
+    margin: 200px auto;
+    text-align: center;
+}
